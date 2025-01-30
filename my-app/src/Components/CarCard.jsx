@@ -6,7 +6,7 @@ import "./CarCard.css"; // Updated CSS
 
 //const CarCard = () => {
   const images = [
-    "https://wallpapercave.com/wp/wp7359234.jpg",
+    "https://www.hdwallpapers.in/download/adro_ford_mustang_coupe_car_white_background_4k_hd_cars-3840x2160.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmRrYq9qRdKRKqBk2PgSABdj_5J_O2zmokQ&s",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCUUDOuRltTMeBaiIWk-gCS6iI5TxHqiSIRA&s",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5zuHssE4sRStzY0ggwmrWOKk4A_CwAUGIg&s",
@@ -68,8 +68,7 @@ import "./CarCard.css"; // Updated CSS
             <button className="seller-btn">View Seller Details</button>
       </div>
 
-      
-
+     
       
 
     
