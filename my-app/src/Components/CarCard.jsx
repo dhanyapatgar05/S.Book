@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaCommentDots, FaShareAlt } from "react-icons/fa";
 import "./CarCard.css"; // Updated CSS
 
 
 //const CarCard = () => {
   const images = [
     "https://www.hdwallpapers.in/download/adro_ford_mustang_coupe_car_white_background_4k_hd_cars-3840x2160.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmRrYq9qRdKRKqBk2PgSABdj_5J_O2zmokQ&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCUUDOuRltTMeBaiIWk-gCS6iI5TxHqiSIRA&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5zuHssE4sRStzY0ggwmrWOKk4A_CwAUGIg&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS3cWAvDO_uasESfcwg8m6MWKUH-JEvz3iuA&s",
+    "https://vinfastauto.us/themes/custom/vinfast_v2/images/v3/vf-8/exterior-color-white.webp",
+    "https://images.pexels.com/photos/20200900/pexels-photo-20200900/free-photo-of-blue-bmw-i5.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   ];
 
   const CarCard = () => {
@@ -44,37 +44,49 @@ import "./CarCard.css"; // Updated CSS
               <FaHeart  className={`heart-icon ${liked ? "liked" : ""}`} />
             </button>
          
-        </div>
+          </div>
       
         <p className="car-info">5,846 kms • Petrol • Manual • 1st Owner</p>
 
         {/* Price Section */}
-        <div className="car-price-section">
-          <h3 className="car-price">₹5.21 Lakh</h3>
-          <p className="emi">EMI starts @ ₹12,932/mo</p>
-          <p className="line"> --------------------------------------------------------------------- </p>
-        </div>
+          <div className="car-price-section">
+            <h3 className="car-price">₹5.21 Lakh</h3>
+            <p className="emi">EMI starts @ ₹12,932/mo</p>
+            <p className="line"> --------------------------------------------------------------------- </p>
+          </div>
 
         {/* Location */}
-      <div className="car-location">
-        <span>📍 Yelahanka, Bangalore</span>
-        <label className="compare">
-          <input type="checkbox"/>Compare
-        </label>
+          <div className="car-location">
+            <span>📍 Yelahanka, Bangalore</span>
+            <label className="compare">
+            <input type="checkbox"/>Compare
+            </label>
 
-      </div>
+          </div>
       {/* View Seller Details Button */}
-      <div className="seller-btn-container">
+          <div className="seller-btn-container">
             <button className="seller-btn">View Seller Details</button>
-      </div>
+          </div>
 
+      {/* Trending and Bottom Actions */}
+          <div className="trending-section">
+            <span className="trending-icon">⚡</span> <strong>Trending Car!</strong>  High chances of sale in next 6 days
+          </div>
+
+          
+        </div>
      
       
-
-    
+    </div>
+    <div className="bottom-actions">
+            <button className="chat-btn">
+              <FaCommentDots className="action-icon" /> Chat with Seller
+            </button>
+            <button className="share-btn">
+              <FaShareAlt className="action-icon" /> Share
+            </button>
     </div>
   </div>
-</div>
   );
 };
 
