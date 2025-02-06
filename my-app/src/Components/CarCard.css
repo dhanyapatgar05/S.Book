@@ -1,6 +1,6 @@
 .car-card {
   display: flex;
-  flex-direction: row; /* Horizontal layout */
+  flex-direction: row;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
@@ -8,7 +8,7 @@
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
- 
+  position: relative;
 }
 
 /* Image Container - Left Side */
@@ -64,14 +64,18 @@
 
 /* Right Side: Car Details */
 
-.box{
+/* Ensure .box takes full height */
+.box {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 10px;
   flex: 2;
- 
-  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 40px; /* Prevent overlap with bottom-actions */
+  position: relative;
 }
 
 .car-details {
@@ -217,12 +221,32 @@
 }
 
 
+
+/* Ensures bottom-actions is placed inside car-card but aligned to the bottom of .box */
 .bottom-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  padding-top: 10px;
-  background: white;
-  padding-bottom: 10px;
   position: absolute;
+  bottom: 5px;
+  right: 16px;
+  display: flex;
+  gap: 170px;
+}
+
+.chat-btn,
+.share-btn {
+  background-color: white;
+  color: #333;
+  border: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.chat-btn:hover,
+.share-btn:hover {
+  background-color: #e0e0e0;
 }
